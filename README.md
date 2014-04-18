@@ -10,8 +10,8 @@ Installation
 pip install git+git://github.com/techkid6/AccountsClientPython
 ```
 
-Example
--------
+Example Usage
+-------------
 
 ```python
 # This gets the UUID of a player by name
