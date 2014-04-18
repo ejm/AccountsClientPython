@@ -14,13 +14,22 @@ Example
 -------
 
 ```python
-# This gets the UUID of a player
-from AccountsClientPython.profiles import find_profiles_by_name
+# This gets the UUID of a player by name
+from AccountsClientPython.profiles import find_profiles_by_names
 
-profiles = find_profiles_by_name('techkid6')
+profiles = find_profiles_by_names('techkid6')
 if profiles is not None and len(profiles) > 0:
     print profiles[0]['id']
 ```
+
+```python
+# This gets the name of a player by UUID
+from AccountsClientPython.profiles import find_profiles_by_uuids
+
+profiles = find_profiles_by_uuids('d560431ed516419580885b294f4f83f0')
+if profiles is not None and len(profiles) > 0:
+    print profiles[0]['name']
+````
 
 License
 -------

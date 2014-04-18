@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
   name='AccountsClientPython',
-  version='0.1',
+  version='0.2',
   description="A python version of Mojang's AccountsClient repository with some extra features",
   install_requires=['requests','json'],
   author='techkid6',
