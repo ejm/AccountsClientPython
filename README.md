@@ -1,5 +1,6 @@
 AccountsClientPython
 ====================
+This library is being rewritten, as certain functions have been done poorly, please use caution with this library as there might be some unexpected bugs
 
 A python version of Mojang's AccountsClient repository with some extra features, inspired by [Mojang/AccountsClient](https://github.com/Mojang/AccountsClient) and [Thezomg/mcapi](https://github.com/Thezomg/mcapi) 
 
