@@ -3,6 +3,7 @@ import json
 
 PROFILES_URL = "https://api.mojang.com/profiles/minecraft"
 SESSIONS_URL = "https://sessionserver.mojang.com/session/minecraft/profile/{uuid}"
+HISTORY_URL  = "https://api.mojang.com/user/profiles/{uuid}/names"
 
 def find_profiles_by_names(names):
   result = []
@@ -15,7 +16,7 @@ def find_profiles_by_names(names):
   
 def find_profile_by_name(name):
   result = find_profiles_by_names([name])
-  if result[0] is None:
+  if not result:
     return None
   else:
     return result[0]
@@ -28,10 +29,16 @@ def find_profiles_by_uuids(uuids):
   
 def find_profile_by_uuid(uuid):
   result = find_profiles_by_uuids([uuid])
-  if result[0] is None:
+  if not result:
     return None
   else:
     return result[0]
+
+def find_history_by_name(name):
+  return find_history_by_uuid(find_profile_by_name(name)['id'])
+
+def find_history_by_uuid(uuid):
+ return _get(HISTORY_URL.format(uuid=uuid))
 
 def _post(url, body, head):
   response = requests.post(url, data=body, headers=head)
