@@ -14,8 +14,8 @@ def uuid_history(uuid):
   return find_history_by_uuid(uuid)
   
 def by_names(name):
-  return find_profile_by_names(name)
+  return find_profiles_by_names(name)
   
 def by_uuids(uuid):
-  return find_profile_by_uuids(uuid)
+  return find_profiles_by_uuids(uuid)
   

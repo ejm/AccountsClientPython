@@ -10,6 +10,7 @@ def find_profiles_by_names(names):
   pages = [ names[i:i+100] for i in range(0, len(names), 100) ]
   for page in pages:
     headers = {'Content-type': 'application/json', 'Accept': 'application/json'}
+    print(type(page))
     body = json.dumps(page)
     result += _post(PROFILES_URL, body, headers)
   return result
