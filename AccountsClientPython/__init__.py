@@ -1,4 +1,5 @@
-import profiles
+from .profiles import find_profile_by_name,find_profile_by_uuid,find_history_by_name,find_history_by_uuid
+#relative import is needed as sys.path might not have this directory in it albeit it has site-package
 
 def by_name(name):
   return profiles.find_profile_by_name(name)
